@@ -1,5 +1,5 @@
-package com.aut;
 
+package com.aut;
 public class Main {
 
     public static void main(String[] args) {
@@ -12,7 +12,8 @@ public class Main {
         int multiplyResult  = AUTMath.multiply(89, 12);
         assertResult(multiplyResult, 1068, "multiply");
 
-        int divideResult = AUTMath.divide(11,5);
+        double divideResult = AUTMath.divide(11,5);
+//2. before: int divideResult = AUTMath.divide(11,5);
         assertResult(divideResult, 2.2, "divide");
 
         int factorial = AUTMath.factorial(7);
@@ -24,8 +25,8 @@ public class Main {
         int fibResult = AUTMath.fib(9);
         assertResult(fibResult, 34, "Fibonacci");
     }
-
-    private static void assertResult(int value, double expected, String operation)  {
+//before: 3.int value
+    private static void assertResult(double value, double expected, String operation)  {
         if (value != expected) {
             System.err.println("from " + operation + " function got: "  + value + " expected: " + expected);
             System.exit(1);
